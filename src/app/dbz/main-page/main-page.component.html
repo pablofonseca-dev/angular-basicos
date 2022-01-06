@@ -1,0 +1,22 @@
+<h1>Dragon Ball Z</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <app-personajes [personajesData]="personajes">
+
+    </app-personajes>
+  </div>
+  <div class="col">
+    <h3>Agregar {{nuevo.nombre}}</h3>
+    <hr />
+
+    <form (ngSubmit)="agregar()">
+      <input type="text" placeholder="Nombre" name="Nombre" [(ngModel)]="nuevo.nombre"/>
+      <input type="number" placeholder="Poder" name="Poder" [(ngModel)]="nuevo.poder"/>
+      <button type="submit">
+        <span>Agregar</span>
+      </button>
+    </form>
+  </div>
+</div>
